@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>P3 Kamal Sir- Sunny Sharma</title>
+		
+		<style>
+			*{
+				font-size: 40px;
+			}
+			body{
+				background-color:lightblue;
+			}
+		</style>
+		<script>
+			function SquareRoot(){
+				event.preventDefault();
+				let ans = document.getElementById("ans");
+				let num = document.getElementById("num");
+				if(num.value.trim()==""){
+					alert("You did not enter any integer");
+					ans.innerHTML = "";
+					num.focus();
+					return;
+				}
+
+				let result = Math.sqrt(parseFloat(num.value));
+				let msg = "The square root of " + num.value + " is " + result;
+				ans.innerHTML = msg;
+			}
+		</script>
+	</head>
+
+	<body>
+		<br><br>
+		<center>
+			<h1>Square Root finder</h1>
+			<form onsubmit="SquareRoot()">
+				<input type="number" id="num" placeholder="Enter any integer"/>
+				<br><br>
+				<input type="submit"
+					style="background-color:yellow;
+						color:red;
+						width:50%;
+						border-radius:40px;"/>
+			</form>
+			<h1 id="ans"></h1>
+		</center>
+		
+		
+	</body>
+</html>
